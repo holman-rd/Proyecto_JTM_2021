@@ -2,7 +2,7 @@
 @section ('head')
 	<div class="masthead-subheading">¡BIENVENIDO A JTM SISTEMAS!</div>
     <div class="masthead-heading text-uppercase">INICIO</div>
-    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">VER LINEA DE SEGUMIENTO</a>
+    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">VER LINEA DE SEGUIMIENTO</a>
 @stop
 
 @section ('contenido')
