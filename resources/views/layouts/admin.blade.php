@@ -34,7 +34,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
                         
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="almacen/empresa">Empresa</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('EmpresaController@index') }}">Empresa</a></li>
 
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,13 +42,13 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item js-scroll-trigger" href="#services">Servicios</a>
+                            <a class="dropdown-item js-scroll-trigger" href="{{ action('StartController@index') }}/#services">Servicios</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item js-scroll-trigger" href="#portfolio">Publicidad</a>
+                            <a class="dropdown-item js-scroll-trigger" href="{{ action('StartController@index') }}/#portfolio">Publicidad</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item js-scroll-trigger" href="#about">Acerca de</a>
+                            <a class="dropdown-item js-scroll-trigger" href="{{ action('StartController@index') }}/#about">Acerca de</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item js-scroll-trigger" href="#team">Equipo</a>
+                            <a class="dropdown-item js-scroll-trigger" href="{{ action('StartController@index') }}/#team">Equipo</a>
                           </div>
                         </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="">Estado</a></li>
