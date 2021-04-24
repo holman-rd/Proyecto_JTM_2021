@@ -15,6 +15,9 @@
         <link href="{{asset('https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700')}}" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{asset('css/styles.css')}}" rel="stylesheet" />
+        <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
+        <link rel="stylesheet" href="{{asset('css/fonts.css')}}">
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
     
 
@@ -52,7 +55,7 @@
                           </div>
                         </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="">Estado</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="">Contáctenos</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('ContactenosController@index') }}">Contáctenos</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('HomeController@index') }}">Login</a></li>
 
 
