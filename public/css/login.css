@@ -1,0 +1,38 @@
+:root {
+    --fondo: radial-gradient(circle at 50% -20.71%, #5c514a 0, #3b3f41 25%, #162c39 50%, #001a31 75%, #00022a 100%);
+  }
+#nav{
+    background-color: #172C39;
+}
+
+#title{
+    color: white;
+}
+#title:hover {
+    color: #EEEC28;
+}
+#menu{
+    color: white;
+}
+#menu:hover{
+    color: #EEEC28;
+}
+#name{
+    color: white;
+}
+#name:hover{
+    color: #EEEC28;
+}
+.navbar-default .navbar-nav>.open>a.dropdown-toggle{
+    background-color: teal;
+}
+#titleLogin{
+    background-image: var(--fondo);
+    color: white;
+    text-align: center;
+    font-size: 200%;
+}
+#panelLogin{
+    background-image: var(--fondo);
+    color: white;
+}
