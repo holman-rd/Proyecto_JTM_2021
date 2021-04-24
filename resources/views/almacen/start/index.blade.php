@@ -18,6 +18,7 @@
     <section class="page-section" id="services">
         <div class="container">
             <div class="text-center">
+                <h4>Prueba se tiene que borrar</h4>
                 <h2 class="section-heading text-uppercase">Servicios</h2>
                 <h3 class="section-subheading text-muted">A continuación se muestran nuestros servicios...</h3>
             </div>    
