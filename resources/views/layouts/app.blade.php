@@ -18,6 +18,8 @@
         integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
     <link rel="stylesheet" href="{{ asset('css/login.css') }}" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
 
     <style>
         body {
@@ -37,7 +39,7 @@
             <div class="navbar-header">
 
                 <!-- Collapsed Hamburger -->
-                @if (!(Auth::guest()))
+                @if (!Auth::guest())
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#app-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
@@ -47,7 +49,7 @@
                     </button>
                 @endif
                 <!-- Branding Image -->
-                <a id="title" class="navbar-brand" href="{{ url('/') }}">JTM SISTEMAS</a>
+                <a id="title" class="navbar-brand" href="{{ url('/') }}"><i class="fas fa-tools"></i> JTM SISTEMAS</a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -60,10 +62,25 @@
                         {{-- <li><a href="{{ url('/login') }}">Iniciar Sesion</a></li> --}}
                         {{-- <li><a href="{{ url('/register') }}">Registrar</a></li> --}}
                     @else
-                        <li><a id="menu" href="{{ url('/home') }}"><i class=""></i>Inicio</a></li>
+                        <li><a id="menu" href="{{ url('/home') }}"><i class=""></i><i class="fas fa-home"></i>
+                                Inicio</a></li>
                         <li class="dropdown">
                             <a id="name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-expanded="false">
+                                aria-expanded="false"><i class="fas fa-align-justify"></i> Modulos <span
+                                    class="caret"></span></a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href=""><i class="fa fa-btn fas fa-users"></i>Clientes</a></li>
+                                <li><a href=""><i class="fa fa-btn fas fa-laptop-medical"></i>Dispositivos</a></li>
+                                <li><a href=""><i class="fa fa-btn fas fa-wrench"> </i>Trabajos</a></li>
+                                <li><a href=""><i class="fa fa-btn fas fa-history"> </i>Estado</a></li>
+                                <li><a href="{{ url('/home') }}"><i
+                                            class="fa fa-btn fas fa-user-check"></i>Usuarios</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a id="name" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-expanded="false"><i class="fas fa-user-tie"></i>
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 

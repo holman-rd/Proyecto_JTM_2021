@@ -56,7 +56,7 @@
                         </li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="">Estado</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('ContactenosController@index') }}">Contáctenos</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('HomeController@index') }}">Login</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('HomeController@index') }}"><i class="fas fa-sign-in-alt"></i>  Login</a></li>
 
 
                         <!--<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
