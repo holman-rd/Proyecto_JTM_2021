@@ -5,7 +5,7 @@
     <br><br><br>
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <div class="panel panel-default">
+            <div id="panelLogin" class="panel panel-default">
                 <div id="titleLogin" class="panel-heading">INICIO DE SESION</div>
                 <div id="panelLogin" class="panel-body">
                     <br>

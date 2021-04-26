@@ -36,3 +36,9 @@
     background-image: var(--fondo);
     color: white;
 }
+body{
+    background-image: url("../assets/img/main.jpg");
+}
+#panelLogin{
+    opacity: 0.9;
+}

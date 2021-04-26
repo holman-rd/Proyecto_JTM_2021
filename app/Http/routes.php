@@ -23,8 +23,9 @@ Route::get('/', 'StartController@index');
 Route::resource('almacen/estudiante','EstudianteController');
 Route::resource('almacen/empresa','EmpresaController');
 Route::resource('almacen/contacto','ContactenosController');
-
+Route::resource('usuario','UsuarioController');
 
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
