@@ -23,11 +23,9 @@ class EmpresaController extends Controller
 
             $empresa=DB::table('detalle_empresa')
             ->orderBy('id_detalle','desc')
-            ->paginate(7);
+            ->paginate(10);
 
-            $id=1;
-            
-            return view('almacen.empresa.index',["empresa"=>$empresa, "empresa2"=>Empresa::findOrFail($id)]);
+            return view('almacen.empresa.index',["empresa"=>$empresa]);
         }
     }
 
