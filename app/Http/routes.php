@@ -27,6 +27,9 @@ Route::resource('almacen/contacto','ContactenosController');
 Route::resource('almacen/categoria','CategoriaController');
 Route::resource('almacen/estadotrabajo','EstadoTrabajoController');
 
+Route::resource('usuario','UsuarioController');
+
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+

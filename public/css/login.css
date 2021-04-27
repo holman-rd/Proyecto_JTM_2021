@@ -31,8 +31,15 @@
     color: white;
     text-align: center;
     font-size: 200%;
+    text-shadow: 2px 2px 2px red;
 }
 #panelLogin{
     background-image: var(--fondo);
     color: white;
+}
+body{
+    background-image: url("../assets/img/main.jpg");
+}
+#panelLogin{
+    opacity: 0.9;
 }

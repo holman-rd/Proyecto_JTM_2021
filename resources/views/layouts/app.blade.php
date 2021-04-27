@@ -74,8 +74,7 @@
                                 <li><a href=""><i class="fa fa-btn fas fa-laptop-medical"></i>Dispositivos</a></li>
                                 <li><a href=""><i class="fa fa-btn fas fa-wrench"> </i>Trabajos</a></li>
                                 <li><a href=""><i class="fa fa-btn fas fa-history"> </i>Estado</a></li>
-                                <li><a href="{{ url('/home') }}"><i
-                                            class="fa fa-btn fas fa-user-check"></i>Usuarios</a></li>
+                                <li><a href="{{ url('/usuario') }}"><i class="fa fa-btn fas fa-user-check"></i>Usuarios</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
