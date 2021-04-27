@@ -4,7 +4,7 @@ role="dialog" tabindex="-1" id="modal-delete-{{$emp->id_detalle}}">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
-				 <h4 class="modal-title">EDITAR DATOS</h4>
+				 <h5 class="modal-title">EDITAR DATOS</h5>
 				<button type="button" class="close" data-dismiss="modal" 
 				aria-label="Close">
                      <span aria-hidden="true">×</span>
@@ -12,7 +12,7 @@ role="dialog" tabindex="-1" id="modal-delete-{{$emp->id_detalle}}">
                
 			</div>
 			<div class="modal-body">
-				{!!Form::model($empresa2,['method'=>'PATCH','route'=>['almacen.empresa.update',$empresa2->id_detalle]])!!}
+				{!!Form::model($emp,['method'=>'PATCH','route'=>['almacen.empresa.update',$emp->id_detalle]])!!}
                 {{Form::token()}}
 
 					<div class="form-row">
@@ -20,7 +20,7 @@ role="dialog" tabindex="-1" id="modal-delete-{{$emp->id_detalle}}">
 							<div>Nombre:</div>
 						</div>
 						<div class="form-group col-sm-8">
-							<input type="text" class="form-control" name="nombre_empresa" value="{{$empresa2->nombre_empresa}}">
+							<input type="text" class="form-control" name="nombre_empresa" value="{{$emp->nombre_empresa}}">
 						</div>
 					</div>
 
@@ -29,7 +29,7 @@ role="dialog" tabindex="-1" id="modal-delete-{{$emp->id_detalle}}">
 							<div>NIT:</div>
 						</div>
 						<div class="form-group col-sm-8">
-							<input type="text" class="form-control" name="nit" value="{{$empresa2->nit}}">
+							<input type="text" class="form-control" name="nit" value="{{$emp->nit}}">
 						</div>
 					</div>
 
@@ -38,7 +38,7 @@ role="dialog" tabindex="-1" id="modal-delete-{{$emp->id_detalle}}">
 							<div>Direccion:</div>
 						</div>
 						<div class="form-group col-sm-8">
-							<input type="text" class="form-control" name="direccion" value="{{$empresa2->direccion}}">
+							<input type="text" class="form-control" name="direccion" value="{{$emp->direccion}}">
 						</div>
 					</div>
 
@@ -47,7 +47,7 @@ role="dialog" tabindex="-1" id="modal-delete-{{$emp->id_detalle}}">
 							<div>Telefono:</div>
 						</div>
 						<div class="form-group col-sm-8">
-							<input type="text" class="form-control" name="telefono" value="{{$empresa2->telefono}}">
+							<input type="number" class="form-control" name="telefono" value="{{$emp->telefono}}">
 						</div>
 					</div>
 
@@ -56,7 +56,7 @@ role="dialog" tabindex="-1" id="modal-delete-{{$emp->id_detalle}}">
 							<div>Correo:</div>
 						</div>
 						<div class="form-group col-sm-8">
-							<input type="text" class="form-control" name="correo" value="{{$empresa2->correo}}">
+							<input type="text" class="form-control" name="correo" value="{{$emp->correo}}">
 						</div>
 					</div>
 
@@ -65,7 +65,7 @@ role="dialog" tabindex="-1" id="modal-delete-{{$emp->id_detalle}}">
 							<div>Información:</div>
 						</div>
 						<div class="form-group col-sm-8">
-							<input type="text" class="form-control" name="informacion" value="{{$empresa2->informacion}}">
+							<input type="text" class="form-control" name="informacion" value="{{$emp->informacion}}">
 						</div>
 					</div>
 

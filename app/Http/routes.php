@@ -24,6 +24,8 @@ Route::resource('almacen/estudiante','EstudianteController');
 Route::resource('almacen/empresa','EmpresaController');
 Route::resource('almacen/contacto','ContactenosController');
 
+Route::resource('almacen/categoria','CategoriaController');
+Route::resource('almacen/estadotrabajo','EstadoTrabajoController');
 
 Route::auth();
 

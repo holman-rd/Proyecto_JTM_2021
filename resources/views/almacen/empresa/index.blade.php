@@ -33,12 +33,9 @@
 								<td>{{ $emp->telefono}}</td>
 								<td>{{ $emp->correo}}</td>
 								<td>{{ $emp->informacion}}</td>
-								<td>
-									
+								<td>	
 			                        <a href="" data-target="#modal-delete-{{$emp->id_detalle}}" data-toggle="modal"><button class="btn btn-info">Editar</button></a>
-									
 								</td>
-								
 							</tr>
 							@include('almacen.empresa.edit')
 							@endforeach

@@ -18,9 +18,9 @@
     <section class="page-section" id="services">
         <div class="container">
             <div class="text-center">
-                <h4>Prueba se tiene que borrar</h4>
+                
                 <h2 class="section-heading text-uppercase">Servicios</h2>
-                <h3 class="section-subheading text-muted">A continuación se muestran nuestros servicios...</h3>
+                <h3 class="section-subheading text-muted">En JTM Sistemas queremos ofrecer las mejores soluciones a sus problemas tecnológicos, a continuación se describen algunos de nuestros servicios...</h3>
             </div>
             <!-- servicios -->
             <div class="row text-center">
@@ -30,7 +30,7 @@
                     <div class="box-icon-inner decorate-rectangle decorate-color-primary-2"><span class="icon-xl linearicons-printer icon-gradient-1"></span></div>
                         <div class="box-icon-caption">
                             <h4 class="my-3">Mantenimiento de impresoras</h4>
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                            <p class="text-muted">En JTM Sistemas realizamos el diagnóstico de su impresora y le ofrecemos las soluciones adecuadas para reparar su dispositivo.</p>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                     <div class="box-icon-inner decorate-triangle decorate-color-secondary"><span class="icon-xl linearicons-desktop icon-gradient-1"></span></div>
                         <div class="box-icon-caption">
                             <h4 class="my-3">Mantenimiento de equipos</h4>
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                            <p class="text-muted">En JTM Sistemas realizamos el diagnóstico de su equipo de computo le ofrecemos las soluciones adecuadas para reparar su dispositivo.</p>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                     <div class="box-icon-inner decorate-circle decorate-color-secondary-2"><span class="icon-xl linearicons-folder-download icon-gradient-1"></span></div>
                         <div class="box-icon-caption">
                             <h4 class="my-3">Actualización de software</h4>
-                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                            <p class="text-muted">En JTM sistemas actualizamos el software de su dispositivo para mantenerlo al día, garatizando una actualización  óptima y funcional.</p>
                         </div>
                     </div>
                 </div> 
@@ -61,8 +61,8 @@
     <section class="page-section bg-light" id="portfolio">
         <div class="container">
             <div class="text-center">
-                <h2 class="section-heading text-uppercase">Portfolio</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <h2 class="section-heading text-uppercase">Nuestro Trabajo</h2>
+                <h3 class="section-subheading text-muted">En JTM Sistemas nos importa la satisfacción de nuestros clientes, estos son algunos de los trabajos que hemos realizado...</h3>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-sm-6 mb-4">
