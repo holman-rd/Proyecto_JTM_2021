@@ -44,6 +44,7 @@
 
                                                 </td>
                                             </tr>
+                                            @include('usuario.edit')
                                             @include('usuario.delete')
                                         @endforeach
                                     </table>

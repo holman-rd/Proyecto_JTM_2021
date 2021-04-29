@@ -38,6 +38,17 @@ class UsuarioController extends Controller
         $usuario->save();
         return Redirect::to('usuario');
     }
+
+    //Método que actualiza los datos provenientes del formulario de una vista en una tabla de la bd
+    public function update(UsuarioFormRequest $request,$id){
+        $usuario=User::findOrFail($id);
+        $usuario->name=$request->get('nombre');
+        $usuario->email=$request->get('email');
+        $usuario->password=$request->get('password');
+        $usuario->update();
+        return Redirect::to('usuario');
+    }
+
     //Método para eliminar registros de una tabla, redirecciona a la vista que este indicada en el método index
     public function destroy($id){
         $usuario=User::findOrFail($id);
