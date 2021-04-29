@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="{{ asset('css/login.css') }}" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
-
     <style>
         body {
             font-family: 'Lato';
@@ -49,7 +48,8 @@
                     </button>
                 @endif
                 <!-- Branding Image -->
-                <a id="title" class="navbar-brand" href="{{ url('/') }}"><i class="fas fa-tools"></i> JTM SISTEMAS</a>
+                <a id="title" class="navbar-brand" href="{{ url('/') }}"><i class="fas fa-tools"></i> JTM
+                    SISTEMAS</a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -74,7 +74,8 @@
                                 <li><a href=""><i class="fa fa-btn fas fa-laptop-medical"></i>Dispositivos</a></li>
                                 <li><a href=""><i class="fa fa-btn fas fa-wrench"> </i>Trabajos</a></li>
                                 <li><a href=""><i class="fa fa-btn fas fa-history"> </i>Estado</a></li>
-                                <li><a href="{{ url('/usuario') }}"><i class="fa fa-btn fas fa-user-check"></i>Usuarios</a></li>
+                                <li><a href="{{ url('/usuario') }}"><i
+                                            class="fa fa-btn fas fa-user-check"></i>Usuarios</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
