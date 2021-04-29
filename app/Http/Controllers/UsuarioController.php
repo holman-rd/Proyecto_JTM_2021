@@ -7,7 +7,10 @@ use Illuminate\Http\Request;
 use sisVentas\Http\Requests;
 use sisVentas\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Redirect;
+use sisVentas\Http\Requests\UsuarioFormRequest;
 use DB;
+use Illuminate\Foundation\Auth\User as AuthUser;
+use sisVentas\User;
 
 class UsuarioController extends Controller
 {
@@ -25,5 +28,20 @@ class UsuarioController extends Controller
 
             return view('usuario.index',["usuario"=>$usuario]); /* El "usuario" es la variable a usar en la vista */
         }
+    }
+      //Método que almacena los datos provenientes del formulario de una vista en una tabla de la bd
+      public function store (UsuarioFormRequest $request){
+        $usuario=new User;
+        $usuario->name=$request->get('nombre');
+        $usuario->email=$request->get('correo');
+        $usuario->password=bcrypt($request->get('contraseña'));
+        $usuario->save();
+        return Redirect::to('usuario');
+    }
+    //Método para eliminar registros de una tabla, redirecciona a la vista que este indicada en el método index
+    public function destroy($id){
+        $usuario=User::findOrFail($id);
+        $usuario->delete();
+        return Redirect::to('usuario')->with('info','Usuario Eliminado Correctamente');
     }
 }
