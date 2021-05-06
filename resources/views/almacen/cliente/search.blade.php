@@ -9,7 +9,7 @@
 			<div class="form-row col-sm-12" align="center">
 				<div class="form-group col-sm-3"></div>
 				<div class="form-group col-sm-1">
-					<label>Nombre:</label>
+					<label><h4 class="section-subheading text-muted">Nombre:</h4></label>
 				</div>
 				<div class="form-group col-sm-4">
 					<input id="cli1" type="text" class="form-control" name="searchText0" placeholder="Buscar..." value="{{$searchText0}}">

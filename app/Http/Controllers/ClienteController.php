@@ -41,7 +41,7 @@ class ClienteController extends Controller
         $cliente->no_documento=$request->get('no_documento');
         $cliente->correo=$request->get('correo');
         $cliente->save();
-        return Redirect::to('almacen/cliente');
+        return Redirect::to('almacen/cliente')->with('info','Cliente Agregado Correctamente');
     }
 
     //Método que actualiza los datos provenientes del formulario de una vista en una tabla de la bd
