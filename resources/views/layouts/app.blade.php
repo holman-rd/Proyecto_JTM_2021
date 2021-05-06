@@ -70,6 +70,16 @@
                                     class="caret"></span></a>
 
                             <ul class="dropdown-menu" role="menu">
+                              
+                                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('ClienteController@index') }}">Cliente</a></li>
+                                
+                                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('CategoriaController@index') }}">Categoría</a></li>
+
+                                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('EstadoTrabajoController@index') }}">Estado Trabajo</a></li>
+                        
+                                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('EmpresaController@index') }}">Empresa</a></li>
+
+                               
                                 <li><a href=""><i class="fa fa-btn fas fa-users"></i>Clientes</a></li>
                                 <li><a href=""><i class="fa fa-btn fas fa-laptop-medical"></i>Dispositivos</a></li>
                                 <li><a href=""><i class="fa fa-btn fas fa-wrench"> </i>Trabajos</a></li>
