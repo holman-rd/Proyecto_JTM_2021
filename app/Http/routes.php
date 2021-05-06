@@ -26,6 +26,8 @@ Route::resource('almacen/contacto','ContactenosController');
 
 Route::resource('almacen/categoria','CategoriaController');
 Route::resource('almacen/estadotrabajo','EstadoTrabajoController');
+Route::resource('almacen/cliente','ClienteController');
+
 
 Route::resource('usuario','UsuarioController');
 

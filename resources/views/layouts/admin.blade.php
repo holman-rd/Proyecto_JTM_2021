@@ -37,12 +37,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ml-auto">
 
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('CategoriaController@index') }}">Categoría</a></li>
-
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('EstadoTrabajoController@index') }}">Estado Trabajo</a></li>
                         
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('EmpresaController@index') }}">Empresa</a></li>
-
                         <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Inicio
