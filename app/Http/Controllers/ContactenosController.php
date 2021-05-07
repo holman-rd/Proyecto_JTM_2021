@@ -21,7 +21,7 @@ class ContactenosController extends Controller
 
             $id=1;
             
-            return view('almacen.contacto.contactenos',["empresa"=>$empresa]);
+            return view('almacen.estado.estado',["empresa"=>$empresa]);
         }
     }
 }

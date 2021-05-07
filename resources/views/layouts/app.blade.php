@@ -48,8 +48,7 @@
                     </button>
                 @endif
                 <!-- Branding Image -->
-                <a id="title" class="navbar-brand" href="{{ url('/') }}"><i class="fas fa-tools"></i> JTM
-                    SISTEMAS</a>
+                <a id="title" class="navbar-brand" href="{{ url('/') }}"><img src="assets/img/logos/jtm (2).png" style="height: 25px; width: 190px;"/></a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
@@ -81,8 +80,8 @@
 
                                
                                 <li><a href=""><i class="fa fa-btn fas fa-users"></i>Clientes</a></li>
-                                <li><a href=""><i class="fa fa-btn fas fa-laptop-medical"></i>Dispositivos</a></li>
-                                <li><a href=""><i class="fa fa-btn fas fa-wrench"> </i>Trabajos</a></li>
+                                <li><a href="{{ action('DispositivoController@index') }}"><i class="fa fa-btn fas fa-laptop-medical"></i>Dispositivos</a></li>
+                                <li><a href="{{ action('TrabajoController@index') }}"><i class="fa fa-btn fas fa-wrench"> </i>Trabajos</a></li>
                                 <li><a href=""><i class="fa fa-btn fas fa-history"> </i>Estado</a></li>
                                 <li><a href="{{ url('/usuario') }}"><i
                                             class="fa fa-btn fas fa-user-check"></i>Usuarios</a></li>
