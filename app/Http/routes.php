@@ -24,6 +24,9 @@ Route::resource('almacen/estudiante','EstudianteController');
 Route::resource('almacen/empresa','EmpresaController');
 Route::resource('almacen/contacto','ContactenosController');
 
+Route::resource('almacen/dispositivo','DispositivoController');
+Route::resource('almacen/trabajo','TrabajoController');
+
 Route::resource('almacen/categoria','CategoriaController');
 Route::resource('almacen/estadotrabajo','EstadoTrabajoController');
 Route::resource('almacen/cliente','ClienteController');

@@ -30,6 +30,7 @@
           <span class="logo-mini"><b>AD</b>V</span>
           <!-- logo for regular state and mobile devices -->
           <span class="logo-lg"><b>JTM SISTEMAS</b></span>
+          <img src="assets/img/logos/jtm (2).png" style="height: 35px; width: 220px;"/>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
