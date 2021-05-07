@@ -24,6 +24,7 @@ class DispositivoFormRequest extends Request
     public function rules()
     {
         return [
+            'serial'=>'required|max:45',
             'marca'=>'required|max:45',
     	    'cliente_id_cliente'=>'required|max:45',
             'categoria_id_categoria'=>'required|max:45',

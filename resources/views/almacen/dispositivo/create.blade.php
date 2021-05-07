@@ -36,39 +36,32 @@ role="dialog" tabindex="-1" id="modal-create">
 						</div>
 					</div>
 
-					<!-- clientes -->
+
+
 					<div class="form-row">
 						<div class="form-group col-sm-4">
-							<div>Lista de clientes:</div>
+							<div>Cliente:</div>
 						</div>
 						<div class="form-group col-sm-8">
-
-							<select class="custom-select" required>
-								<option selected disabled value="">Cedula del cliente</option>
-								@foreach ($cliente as $cli)
-									<option value="">{{$cli->id_cliente}} - {{$cli->nombre}}</option>
+							<select name="cliente_id_cliente" class="form-control">
+								@foreach($cliente as $cli)
+								<option value="{{$cli->id_cliente}}">{{$cli->nombre}}</option>
 								@endforeach
 							</select>
-							<span>Escriba numero identificador:</span>
-							<input type="text" class="form-control" name="cliente_id_cliente">
 						</div>
 					</div>
 
-					<!-- categorias -->
+
 					<div class="form-row">
 						<div class="form-group col-sm-4">
-							<div>Lista de categorias:</div>
+							<div>Categoría:</div>
 						</div>
 						<div class="form-group col-sm-8">
-
-						<select class="custom-select" required>
-								<option selected disabled value="">Categoria del dispositivo</option>
-								@foreach ($categoria as $cat)
-									<option value="">{{$cat->id_categoria}} - {{$cat->nombre}}</option>
+							<select name="categoria_id_categoria" class="form-control">
+								@foreach($categoria as $cat)
+								<option value="{{$cat->id_categoria}}">{{$cat->nombre}}</option>
 								@endforeach
 							</select>
-							<span>Escriba numero identificador:</span>
-							<input type="text" class="form-control" name="categoria_id_categoria">
 						</div>
 					</div>
 

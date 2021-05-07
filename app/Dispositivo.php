@@ -14,6 +14,7 @@ class Dispositivo extends Model
 
 
     protected $fillable =[
+        'serial',
     	'marca',
     	'cliente_id_cliente',
         'categoria_id_categoria'

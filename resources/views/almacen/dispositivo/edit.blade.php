@@ -36,39 +36,32 @@ role="dialog" tabindex="-1" id="modal-edit-{{$disp->serial}}">
 						</div>
 					</div>
 
-					<!-- cliente -->
+
+
 					<div class="form-row">
 						<div class="form-group col-sm-4">
-							<div>Lista de clientes:</div>
+							<div>Cliente:</div>
 						</div>
 						<div class="form-group col-sm-8">
-
-							<select class="custom-select">
-								<option selected disabled value="">Cedula del cliente</option>
-								@foreach ($cliente as $cli)
-									<option value="{{ $disp->cliente_id_cliente}}">{{$cli->id_cliente}}</option>
+							<select name="cliente_id_cliente" class="form-control">
+								@foreach($cliente as $cli)
+								<option value="{{$cli->id_cliente}}">{{$cli->nombre}}</option>
 								@endforeach
 							</select>
-							<!-- <span>Escriba numero identificador:</span>
-							<input type="text" class="form-control" name="cliente_id_cliente" value="{{ $disp->cliente_id_cliente}}" required> -->
 						</div>
 					</div>
 
-					<!-- categoria -->
+					
 					<div class="form-row">
 						<div class="form-group col-sm-4">
-							<div>Categoria:</div>
+							<div>Categoría:</div>
 						</div>
 						<div class="form-group col-sm-8">
-
-							<select class="custom-select">
-								<option selected disabled value="">Categoria del dispositivo</option>
-								@foreach ($categoria as $cat)
-									<option value="">{{$cat->id_categoria}} - {{$cat->nombre}}</option>
+							<select name="categoria_id_categoria" class="form-control">
+								@foreach($categoria as $cat)
+								<option value="{{$cat->id_categoria}}">{{$cat->nombre}}</option>
 								@endforeach
 							</select>
-							<span>Escriba numero identificador:</span>
-							<input type="text" class="form-control" name="categoria_id_categoria" value="{{$disp->categoria_id_categoria}}" required>
 						</div>
 					</div>
 
