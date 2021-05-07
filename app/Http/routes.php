@@ -30,7 +30,7 @@ Route::resource('almacen/trabajo','TrabajoController');
 Route::resource('almacen/categoria','CategoriaController');
 Route::resource('almacen/estadotrabajo','EstadoTrabajoController');
 Route::resource('almacen/cliente','ClienteController');
-Route::resource('almacen/Factura','FacturaController');
+Route::resource('almacen/factura','FacturaController');
 
 Route::resource('usuario','UsuarioController');
 

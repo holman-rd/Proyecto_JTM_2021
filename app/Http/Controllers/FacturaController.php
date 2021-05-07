@@ -36,5 +36,33 @@ class FacturaController extends Controller
         }
     }
 
+    //Método que almacena los datos provenientes del formulario de una vista en una tabla de la bd
+    public function store (FacturaFormRequest $request){
+        $factura=new Factura;
+        $factura->fecha=$request->get('fecha');
+        $factura->ciudad=$request->get('ciudad');
+        $factura->estado=$request->get('estado');
+        $factura->detalle_empresa_id_detalle=$request->get('detalle_empresa_id_detalle');
+        $factura->save();
+        return Redirect::to('almacen/factura')->with('info','Factura Agregada Correctamente');
+    }
+
+    //Método que actualiza los datos provenientes del formulario de una vista en una tabla de la bd
+    public function update(FacturaFormRequest $request,$id){
+        $factura=Factura::findOrFail($id);
+        $factura->fecha=$request->get('fecha');
+        $factura->ciudad=$request->get('ciudad');
+        $factura->estado=$request->get('estado');
+        $factura->detalle_empresa_id_detalle=$request->get('detalle_empresa_id_detalle');
+        $factura->update();
+        return Redirect::to('almacen/factura')->with('info','Registro Actualizado Correctamente');
+    }
+    
+    //Método para eliminar registros de una tabla, redirecciona a la vista que este indicada en el método index
+    public function destroy($id){
+        $factura=Factura::findOrFail($id);
+        $factura->delete();
+        return Redirect::to('almacen/factura')->with('info','Registro Eliminado Correctamente');
+    }
 
 }

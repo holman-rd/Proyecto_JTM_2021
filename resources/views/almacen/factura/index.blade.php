@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        {{-- @include('usuario.create') --}}
+        @include('almacen.factura.create')
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="panel panel-default">
@@ -12,7 +12,7 @@
                                 <h2 class="section-heading text-uppercase">FACTURAS</h2>
                             </div>
                             <div class="contenedor-modal col-md-2">
-                                <a href="" data-target="#modal-create-user" data-toggle="modal"><button
+                                <a href="" data-target="#modal-create-factura" data-toggle="modal"><button
                                         class="btn btn-info">Registrar Factura</button></a>
                             </div>
                         </div>
@@ -48,18 +48,18 @@
 
                                                 </td>
                                             </tr>
-                                            {{-- @include('usuario.edit') --}}
-                                            {{-- @include('usuario.delete') --}}
+                                            @include('almacen.factura.edit')
+                                            @include('almacen.factura.delete')
                                         @endforeach
                                     </table>
                                 </div>
                             </div>
                         </div>
-                        {{-- @if (session('info'))
+                        @if (session('info'))
                             <div class="alert alert-success">
                                 {{ session('info') }}
                             </div>
-                        @endif --}}
+                        @endif
                     </div>
                 </div>
             </div>
