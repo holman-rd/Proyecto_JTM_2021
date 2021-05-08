@@ -42,7 +42,7 @@ role="dialog" tabindex="-1" id="modal-create">
 							<div>Costo del trabajo:</div>
 						</div>
 						<div class="form-group col-sm-8">
-							<input type="number" class="form-control" name="costo_trabajo">
+							<input type="number" class="form-control" name="costo_trabajo" min=200000>
 						</div>
 					</div>
 					<!-- dispositivos -->
@@ -52,14 +52,11 @@ role="dialog" tabindex="-1" id="modal-create">
 						</div>
 						<div class="form-group col-sm-8">
 
-							<select class="custom-select" required>
-								<option selected disabled value="">Dispositivos</option>
+						<select class="custom-select" name="dispositivo_serial" required>
 								@foreach ($dispositivo as $disp)
-									<option value="">{{$disp->serial}} - {{$disp->marca}}</option>
+									<option value="{{$disp->serial}}">{{$disp->serial}} - {{$disp->marca}}</option>
 								@endforeach
 							</select>
-							<span>Escriba el serial del dispositivo:</span>
-							<input type="text" class="form-control" name="dispositivo_serial">
 						</div>
 					</div>
 
@@ -70,14 +67,11 @@ role="dialog" tabindex="-1" id="modal-create">
 						</div>
 						<div class="form-group col-sm-8">
 
-							<select class="custom-select" required>
-								<option selected disabled value="">Estado del trabajo</option>
+						<select class="custom-select" name="estado_trabajo_id_estado" required>
 								@foreach ($estadotrabajo as $et)
-									<option value="">{{$et->id_estado}} - {{$et->nombre}}</option>
+									<option value="{{$et->id_estado}}">{{$et->nombre}}</option>
 								@endforeach
 							</select>
-							<span>Escriba el numero del estado:</span>
-							<input type="text" class="form-control" name="estado_trabajo_id_estado" >
 						</div>
 					</div>
 
@@ -91,7 +85,8 @@ role="dialog" tabindex="-1" id="modal-create">
 				{!!Form::close()!!}	
 
 			</div>
-			
+			<div class="modal-footer">
+			</div>
 		</div>
 	</div>
 	
