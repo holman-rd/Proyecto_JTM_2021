@@ -48,7 +48,7 @@
                     </button>
                 @endif
                 <!-- Branding Image -->
-                <a id="title" class="navbar-brand" href="{{ url('/') }}"><img src="assets/img/logos/jtm (2).png" style="height: 35px; width: 220px;"/></a>
+                <a id="title" class="navbar-brand" href="{{ url('/') }}"><img src="{{URL::asset('assets/img/logos/jtm2.png')}}" style="height: 35px; width: 220px;"/></a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
