@@ -10,7 +10,6 @@ role="dialog" tabindex="-1" id="modal-create">
                      <span aria-hidden="true">×</span>
                 </button>
 			</div>
-
 			<div class="modal-body">
 
 				{!!Form::open(array('url'=>'almacen/dispositivo','method'=>'POST','autocomplete'=>'off'))!!}
@@ -74,7 +73,9 @@ role="dialog" tabindex="-1" id="modal-create">
 				{!!Form::close()!!}	
 
 			</div>
-			
+			<div class="modal-footer">
+			</div>
+
 		</div>
 	</div>
 	

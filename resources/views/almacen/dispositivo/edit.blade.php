@@ -74,7 +74,9 @@ role="dialog" tabindex="-1" id="modal-edit-{{$disp->serial}}">
 				{!!Form::close()!!}		
             
 			</div>
-			
+			<div class="modal-footer">
+			</div>
+
 		</div>
 	</div>
 	

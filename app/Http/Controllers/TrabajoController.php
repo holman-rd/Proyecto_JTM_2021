@@ -23,17 +23,16 @@ class TrabajoController extends Controller
     {
         if ($request){
 
-            $trabajo=DB::table('trabajo')
+            $trabajo=DB::table('trabajo as t')
+            ->join('dispositivo as disp','t.dispositivo_serial','=','disp.serial')
+            ->join('estado_trabajo as et','t.estado_trabajo_id_estado','=','et.id_estado')
+            ->select('t.id_trabajo','t.descripcion','t.fecha_inicio','t.costo_trabajo','disp.marca as dispositivo_serial','et.nombre as estado_trabajo_id_estado')
             ->orderBy('id_trabajo','asc')
             ->paginate(10);
 
-            $dispositivo=DB::table('dispositivo')
-            ->orderBy('serial','asc')
-            ->paginate(10);
+            $dispositivo=DB::table('dispositivo')->get();
 
-            $estadotrabajo=DB::table('estado_trabajo')
-            ->orderBy('id_estado','asc')
-            ->paginate(10);
+            $estadotrabajo=DB::table('estado_trabajo')->get();
             
             return view('almacen.trabajo.index',["trabajo"=>$trabajo,"dispositivo"=>$dispositivo,"estadotrabajo"=>$estadotrabajo]);
         }
