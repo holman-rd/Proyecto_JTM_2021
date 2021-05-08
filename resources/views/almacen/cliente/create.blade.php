@@ -3,12 +3,12 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">REGISTRAR CATEGORÍA</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
-            </div>
 
+                <h5 class="modal-title">REGISTRAR CATEGORÍA</h5>
+            </div>
             <div class="modal-body">
                 <div class="container-fluid">
                     {!! Form::open(['url' => 'almacen/cliente', 'method' => 'POST', 'autocomplete' => 'off']) !!}
