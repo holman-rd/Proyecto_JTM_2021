@@ -31,6 +31,7 @@ Route::resource('almacen/categoria','CategoriaController');
 Route::resource('almacen/estadotrabajo','EstadoTrabajoController');
 Route::resource('almacen/cliente','ClienteController');
 Route::resource('almacen/factura','FacturaController');
+Route::resource('almacen/detallefactura','DetalleFacturaController');
 
 Route::resource('usuario','UsuarioController');
 
