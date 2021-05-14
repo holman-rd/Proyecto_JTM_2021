@@ -28,6 +28,15 @@ role="dialog" tabindex="-1" id="modal-edit-{{$tbj->id_cliente}}">
 										<p>Email: info@abelosh.com</p>
 									</div>
 								</td>
+								<td class="info_factura">
+									<div class="round">
+										<span class="h3">Factura</span>
+										<p>No. Factura: <strong>000001</strong></p>
+										<p>Fecha: 20/01/2019</p>
+										<p>Hora: 10:30am</p>
+										<p>Vendedor: Jorge Pérez Hernández Cabrera</p>
+									</div>
+								</td>
 							</tr>
 						</table>
 						<table id="factura_cliente">

@@ -32,19 +32,19 @@
                             <input type="text" class="form-control" name="ciudad" value="{{ $fac->ciudad }}">
                         </div>
                     </div>
-
+                    
                     <div class="form-row">
-						<div class="form-group col-sm-4">
-							<div>Empresa:</div>
-						</div>
-						<div class="form-group col-sm-8">
-							<select name="detalle_empresa_id_detalle" class="form-control">
-								@foreach($detalle as $det)
-								<option value="{{$det->id_detalle}}">{{$det->nombre_empresa}}</option>
-								@endforeach
-							</select>
-						</div>
-					</div>
+                        <div class="form-group col-sm-4">
+                            <div>Empresa:</div>
+                        </div>
+                        <div class="form-group col-sm-8">
+                            <select name="detalle_empresa_id_detalle" class="form-control">
+                                @foreach ($detalle as $det)
+                                    <option value="{{ $det->id_detalle }}">{{ $det->nombre_empresa }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
 
                     <div class="form-row" align="center">
                         <div class="form-group col-sm-12" align="center">
