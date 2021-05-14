@@ -26,7 +26,6 @@
                                             <th>ID FACTURA</th>
                                             <th>FECHA</th>
                                             <th>CIUDAD</th>
-                                            <th>ESTADO</th>
                                             <th>DETALLE EMPRESA</th>
                                             <th>OPCIONES</th>
                                         </thead>
@@ -35,7 +34,6 @@
                                                 <td>{{ $fac->id_datos }}</td>
                                                 <td>{{ $fac->fecha }}</td>
                                                 <td>{{ $fac->ciudad }}</td>
-                                                <td>{{ $fac->estado }}</td>
                                                 <td>{{ $fac->detalle_empresa_id_detalle }}</td>
                                                 <td>
 
