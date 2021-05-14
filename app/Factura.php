@@ -15,7 +15,6 @@ class Factura extends Model
     protected $fillable =[
         'fecha',
     	'ciudad',
-    	'estado',
         'detalle_empresa_id_detalle'
     ];
 
