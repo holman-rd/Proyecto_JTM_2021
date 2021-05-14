@@ -25,7 +25,7 @@ class FacturaController extends Controller
 
             $factura=DB::table('factura as f')
             ->join('detalle_empresa as det','f.detalle_empresa_id_detalle','=','det.id_detalle')
-            ->select('f.id_datos','f.fecha','f.ciudad','f.estado','det.nombre_empresa as detalle_empresa_id_detalle')
+            ->select('f.id_datos','f.fecha','f.ciudad','det.nombre_empresa as detalle_empresa_id_detalle')
             ->orderBy('id_datos','asc')
             ->paginate(10);
 
@@ -41,7 +41,6 @@ class FacturaController extends Controller
         $factura=new Factura;
         $factura->fecha=$request->get('fecha');
         $factura->ciudad=$request->get('ciudad');
-        $factura->estado=$request->get('estado');
         $factura->detalle_empresa_id_detalle=$request->get('detalle_empresa_id_detalle');
         $factura->save();
         return Redirect::to('almacen/factura')->with('info','Factura Agregada Correctamente');
@@ -52,7 +51,6 @@ class FacturaController extends Controller
         $factura=Factura::findOrFail($id);
         $factura->fecha=$request->get('fecha');
         $factura->ciudad=$request->get('ciudad');
-        $factura->estado=$request->get('estado');
         $factura->detalle_empresa_id_detalle=$request->get('detalle_empresa_id_detalle');
         $factura->update();
         return Redirect::to('almacen/factura')->with('info','Registro Actualizado Correctamente');
