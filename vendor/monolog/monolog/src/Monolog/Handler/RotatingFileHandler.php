@@ -12,7 +12,6 @@
 namespace Monolog\Handler;
 
 use Monolog\Logger;
-use Monolog\Utils;
 
 /**
  * Stores logs to files that are rotated every day and a limited number of files are kept.
@@ -40,13 +39,13 @@ class RotatingFileHandler extends StreamHandler
      * @param string   $filename
      * @param int      $maxFiles       The maximal amount of files to keep (0 means unlimited)
      * @param int      $level          The minimum logging level at which this handler will be triggered
-     * @param bool     $bubble         Whether the messages that are handled can bubble up the stack or not
+     * @param Boolean  $bubble         Whether the messages that are handled can bubble up the stack or not
      * @param int|null $filePermission Optional file permissions (default (0644) are only for owner read/write)
-     * @param bool     $useLocking     Try to lock log file before doing any writes
+     * @param Boolean  $useLocking     Try to lock log file before doing any writes
      */
     public function __construct($filename, $maxFiles = 0, $level = Logger::DEBUG, $bubble = true, $filePermission = null, $useLocking = false)
     {
-        $this->filename = Utils::canonicalizePath($filename);
+        $this->filename = $filename;
         $this->maxFiles = (int) $maxFiles;
         $this->nextRotation = new \DateTime('tomorrow');
         $this->filenameFormat = '{filename}-{date}';
@@ -67,26 +66,13 @@ class RotatingFileHandler extends StreamHandler
         }
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function reset()
-    {
-        parent::reset();
-
-        if (true === $this->mustRotate) {
-            $this->rotate();
-        }
-    }
-
     public function setFilenameFormat($filenameFormat, $dateFormat)
     {
-        if (!preg_match('{^Y(([/_.-]?m)([/_.-]?d)?)?$}', $dateFormat)) {
+        if (!in_array($dateFormat, array(self::FILE_PER_DAY, self::FILE_PER_MONTH, self::FILE_PER_YEAR))) {
             trigger_error(
-                'Invalid date format - format must be one of '.
-                'RotatingFileHandler::FILE_PER_DAY ("Y-m-d"), RotatingFileHandler::FILE_PER_MONTH ("Y-m") '.
-                'or RotatingFileHandler::FILE_PER_YEAR ("Y"), or you can set one of the '.
-                'date formats using slashes, underscores and/or dots instead of dashes.',
+                'Invalid date format - format should be one of '.
+                'RotatingFileHandler::FILE_PER_DAY, RotatingFileHandler::FILE_PER_MONTH '.
+                'or RotatingFileHandler::FILE_PER_YEAR.',
                 E_USER_DEPRECATED
             );
         }
@@ -179,7 +165,7 @@ class RotatingFileHandler extends StreamHandler
         $fileInfo = pathinfo($this->filename);
         $glob = str_replace(
             array('{filename}', '{date}'),
-            array($fileInfo['filename'], '[0-9][0-9][0-9][0-9]*'),
+            array($fileInfo['filename'], '*'),
             $fileInfo['dirname'] . '/' . $this->filenameFormat
         );
         if (!empty($fileInfo['extension'])) {

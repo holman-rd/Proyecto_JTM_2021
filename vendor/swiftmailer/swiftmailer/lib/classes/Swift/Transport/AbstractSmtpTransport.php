@@ -57,7 +57,7 @@ abstract class Swift_Transport_AbstractSmtpTransport implements Swift_Transport
      *
      * @param string $domain
      *
-     * @return $this
+     * @return Swift_Transport_AbstractSmtpTransport
      */
     public function setLocalDomain($domain)
     {
@@ -491,9 +491,6 @@ abstract class Swift_Transport_AbstractSmtpTransport implements Swift_Transport
      */
     public function __destruct()
     {
-        try {
-            $this->stop();
-        } catch (Exception $e) {
-        }
+        $this->stop();
     }
 }

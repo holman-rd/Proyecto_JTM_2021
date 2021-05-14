@@ -12,7 +12,6 @@
 namespace Monolog\Handler;
 
 use Monolog\Logger;
-use Monolog\Utils;
 
 /**
  * Stores to any stream resource
@@ -33,9 +32,9 @@ class StreamHandler extends AbstractProcessingHandler
     /**
      * @param resource|string $stream
      * @param int             $level          The minimum logging level at which this handler will be triggered
-     * @param bool            $bubble         Whether the messages that are handled can bubble up the stack or not
+     * @param Boolean         $bubble         Whether the messages that are handled can bubble up the stack or not
      * @param int|null        $filePermission Optional file permissions (default (0644) are only for owner read/write)
-     * @param bool            $useLocking     Try to lock log file before doing any writes
+     * @param Boolean         $useLocking     Try to lock log file before doing any writes
      *
      * @throws \Exception                If a missing directory is not buildable
      * @throws \InvalidArgumentException If stream is not a resource or string
@@ -46,7 +45,7 @@ class StreamHandler extends AbstractProcessingHandler
         if (is_resource($stream)) {
             $this->stream = $stream;
         } elseif (is_string($stream)) {
-            $this->url = Utils::canonicalizePath($stream);
+            $this->url = $stream;
         } else {
             throw new \InvalidArgumentException('A stream must either be a resource or a string.');
         }
@@ -64,7 +63,6 @@ class StreamHandler extends AbstractProcessingHandler
             fclose($this->stream);
         }
         $this->stream = null;
-        $this->dirCreated = null;
     }
 
     /**
@@ -106,8 +104,7 @@ class StreamHandler extends AbstractProcessingHandler
             restore_error_handler();
             if (!is_resource($this->stream)) {
                 $this->stream = null;
-
-                throw new \UnexpectedValueException(sprintf('The stream or file "%s" could not be opened in append mode: '.$this->errorMessage, $this->url));
+                throw new \UnexpectedValueException(sprintf('The stream or file "%s" could not be opened: '.$this->errorMessage, $this->url));
             }
         }
 
@@ -116,21 +113,11 @@ class StreamHandler extends AbstractProcessingHandler
             flock($this->stream, LOCK_EX);
         }
 
-        $this->streamWrite($this->stream, $record);
+        fwrite($this->stream, (string) $record['formatted']);
 
         if ($this->useLocking) {
             flock($this->stream, LOCK_UN);
         }
-    }
-
-    /**
-     * Write to stream
-     * @param resource $stream
-     * @param array $record
-     */
-    protected function streamWrite($stream, array $record)
-    {
-        fwrite($stream, (string) $record['formatted']);
     }
 
     private function customErrorHandler($code, $msg)
@@ -154,7 +141,7 @@ class StreamHandler extends AbstractProcessingHandler
             return dirname(substr($stream, 7));
         }
 
-        return null;
+        return;
     }
 
     private function createDir()
@@ -170,7 +157,7 @@ class StreamHandler extends AbstractProcessingHandler
             set_error_handler(array($this, 'customErrorHandler'));
             $status = mkdir($dir, 0777, true);
             restore_error_handler();
-            if (false === $status && !is_dir($dir)) {
+            if (false === $status) {
                 throw new \UnexpectedValueException(sprintf('There is no existing directory at "%s" and its not buildable: '.$this->errorMessage, $dir));
             }
         }

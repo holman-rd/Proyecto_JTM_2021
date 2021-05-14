@@ -83,8 +83,6 @@
                                 <li><a href="{{ url('/usuario') }}"><i id="iconos" class="fa fa-btn fas fa-user-check"></i>Usuarios</a></li>
                                 <li><a href="{{ action('FacturaController@index') }}"><i id="iconos" class="fas fa-file-invoice-dollar"></i> Facturas</a></li>
                                 <li><a href="{{ action('DetalleFacturaController@index') }}"><i id="iconos" class="fas fa-file-alt"></i> Detalle Factura</a></li>
-                                <li><a href="{{ action('ImprimirFacturaController@index') }}"><i id="iconos" class="fas fa-print"></i> Imprimir Factura</a></li>
-
                             </ul>
                         </li>
                         <li class="dropdown">

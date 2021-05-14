@@ -56,31 +56,3 @@
         </div>
     </div>
 @endsection
-<table class="table table-striped table-bordered table-condensed table-hover">
-											<thead>
-												<th>NOMBRE</th>
-												<th>TELÉFONO</th>
-												<th>DIRECCI&Oacute;N</th>
-												<th>NO. DOCUMENTO</th>
-												<th>CORREO</th>
-												<th>OPCIONES</th>
-											</thead>
-												<!-- @foreach ($dispositivo as $disp) -->
-													<!-- @foreach ($trabajo as $tbj) -->
-														<!-- @if({{$tbj->dispositivo_serial}} = {{$disp->serial}}) -->
-															@foreach ($cliente as $cli)
-																<!-- @if({{$cli->id_cliente}} = {{$disp->cliente_id_cliente}}) -->
-																<tr>
-																	<td>{{ $cli->nombre }}</td>
-																	<td>{{ $cli->telefono }}</td>
-																	<td>{{ $cli->direccion }}</td>
-																	<td>{{ $cli->no_documento }}</td>
-																	<td>{{ $cli->correo }}</td>
-																	<td>
-																		<a href="" data-target=""
-																			data-toggle="modal"><button class="btn btn-info">Imprimir</button>
-																		</a>
-																	</td>
-																</tr>
-
-										</table>
