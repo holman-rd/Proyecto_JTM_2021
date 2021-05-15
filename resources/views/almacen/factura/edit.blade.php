@@ -34,15 +34,6 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="form-group col-sm-4">
-                            <div>Estado:</div>
-                        </div>
-                        <div class="form-group col-sm-8">
-                            <input type="number" class="form-control" name="estado" value="{{ $fac->estado }}">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
 						<div class="form-group col-sm-4">
 							<div>Empresa:</div>
 						</div>
