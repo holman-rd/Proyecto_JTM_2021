@@ -17,16 +17,28 @@ role="dialog" tabindex="-1" id="modal-edit-{{$tbj->id_cliente}}">
 							<tr>
 								<td class="logo_factura">
 									<div>
-										<img src="{{URL::asset('assets/img/logos/jtm (1).png')}}">
+										<img src="{{URL::asset('assets/img/logos/jtm.png')}}" style="height: 40px; width: 230px;">
 									</div>
 								</td>
+								<!-- solo es un espacio -->
+								<td>
+									<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+									<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+									<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+									<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+									<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+									<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+								</td>											
+
 								<td class="info_empresa">
-									<div>
-										<span class="h2">SISTEMA VENTAS ABELOSH</span>
-										<p>Avenida las américas Zona 13, Guatemala</p>
-										<p>Teléfono: +(502) 2222-3333</p>
-										<p>Email: info@abelosh.com</p>
-									</div>
+									@foreach ($empresa as $emp)
+										<span class="h3">{{ $emp->nombre_empresa}}</span><br><br>
+										<p>NIT: {{ $emp->nit}}</p>
+										<p>Direcci&oacute;n: {{ $emp->direccion}}</p>
+										<p>Telefono: {{ $emp->telefono}}</p>
+										<p>Correo: {{ $emp->correo}}</p>
+										<p>{{ $emp->informacion}}</p>
+									@endforeach
 								</td>
 							</tr>
 						</table>
@@ -34,15 +46,49 @@ role="dialog" tabindex="-1" id="modal-edit-{{$tbj->id_cliente}}">
 							<tr>
 								<td class="info_cliente">
 									<div class="round">
-										<span class="h3">Cliente</span>
+										<span class="h3">Cliente</span><br><br>
 										<table class="datos_cliente">
 											<tr>
-												<td><label>Nit:</label><p>54895468</p></td>
-												<td><label>Teléfono:</label> <p>7854526</p></td>
+												<td>
+													<label>Nombre:</label><p>{{ $tbj->nombre }}</p>
+												</td>
+
+												<!-- solo es un espacio -->
+												<td>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												</td>
+
+												<td>
+													<label>Documento:</label> <p>{{ $tbj->no_documento}}</p>
+												</td>
 											</tr>
 											<tr>
-												<td><label>Nombre:</label> <p>Angel Arana Cabrera</p></td>
-												<td><label>Dirección:</label> <p>Calzada Buena Vista</p></td>
+												<td>
+													<label>Telefono:</label> <p>{{ $tbj->telefono }}</p>
+												</td>
+
+												<!-- solo es un espacio -->
+												<td>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+													<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												</td>
+
+												<td>
+													<label>Correo:</label> <p>{{ $tbj->correo }}</p>
+												</td>
 											</tr>
 										</table>
 									</div>
@@ -54,68 +100,124 @@ role="dialog" tabindex="-1" id="modal-edit-{{$tbj->id_cliente}}">
 						<table id="factura_detalle">
 								<thead>
 									<tr>
-										<th width="50px">Cant.</th>
-										<th class="textleft">Descripción</th>
-										<th class="textright" width="150px">Precio Unitario.</th>
-										<th class="textright" width="150px"> Precio Total</th>
+										<th width="50px">Serial</th>
+										<th class="textleft">Marca</th>
+										<th>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+										</th>
+
+										<th class="textright" width="150px">Descripcion del trabajo</th>
+										<th>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+										</th>
+
+										<th class="textright" width="150px"> Costo</th>
 									</tr>
 								</thead>
 								<tbody id="detalle_productos">
-									<tr>
-										<td class="textcenter">1</td>
-										<td>Plancha</td>
-										<td class="textright">516.67</td>
-										<td class="textright">516.67</td>
-									</tr>
-									<tr>
-										<td class="textcenter">1</td>
-										<td>Plancha</td>
-										<td class="textright">516.67</td>
-										<td class="textright">516.67</td>
-									</tr>
-									<tr>
-										<td class="textcenter">1</td>
-										<td>Plancha</td>
-										<td class="textright">516.67</td>
-										<td class="textright">516.67</td>
-									</tr>
-									<tr>
-										<td class="textcenter">1</td>
-										<td>Plancha</td>
-										<td class="textright">516.67</td>
-										<td class="textright">516.67</td>
-									</tr>
-									<tr>
-										<td class="textcenter">1</td>
-										<td>Plancha</td>
-										<td class="textright">516.67</td>
-										<td class="textright">516.67</td>
-									</tr>
-									<tr>
-										<td class="textcenter">1</td>
-										<td>Plancha</td>
-										<td class="textright">516.67</td>
-										<td class="textright">516.67</td>
-									</tr>
+								<!-- {{$total=0}} -->
+								@foreach ($trabajo_costo as $tc)
+									@if($tc->id_cliente == $tbj->id_cliente)
+										<tr>
+											<td class="textcenter">{{$tc->serial}}</td>
+											<td>{{$tc->marca}}</td>
+											<td>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											</td>
+
+											<td class="textright">{{$tc->descripcion}}</td>
+											<td>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+												<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											</td>
+
+											<td class="textright">{{$tc->costo_trabajo}}</td>
+										</tr>
+										<!-- {{$total=$total+$tc->costo_trabajo}} -->
+									@endif
+								@endforeach
 								</tbody>
 								<tfoot id="detalle_totales">
 									<tr>
-										<td colspan="3" class="textright"><span>SUBTOTAL Q.</span></td>
-										<td class="textright"><span>516.67</span></td>
+										<td>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+										</td>
+										<td>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+										</td>
 									</tr>
 									<tr>
-										<td colspan="3" class="textright"><span>IVA (12%)</span></td>
-										<td class="textright"><span>516.67</span></td>
-									</tr>
-									<tr>
-										<td colspan="3" class="textright"><span>TOTAL Q.</span></td>
-										<td class="textright"><span>516.67</span></td>
+
+										<td colspan="3" class="textright" width="150px"><label>TOTAL.</label></td>
+										<td>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+										</td>
+										<td>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+											<span style='display:inline; white-space:pre;'> </span><span style='display:inline; white-space:pre;'> </span>
+										</td>
+
+										<td class="textright" width="150px"><label>{{$total}}</label></td>
 									</tr>
 							</tfoot>
 						</table>
 						<div>
-							<p class="nota">Si usted tiene preguntas sobre esta factura, <br>pongase en contacto con nombre, teléfono y Email</p>
-							<h4 class="label_gracias">¡Gracias por su compra!</h4>
+							<p class="nota">Si usted tiene preguntas sobre esta factura, <br>pongase en contacto a traves de las lineas de comunicación ofrecidas. </p>
+							<h4 class="label_gracias">¡Gracias por su visita!</h4>
 						</div>
 
 					</div>
