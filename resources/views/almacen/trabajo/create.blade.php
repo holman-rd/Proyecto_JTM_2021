@@ -43,7 +43,7 @@ role="dialog" tabindex="-1" id="modal-create">
 								<div>Costo del trabajo:</div>
 							</div>
 							<div class="form-group col-sm-8">
-								<input type="number" class="form-control" name="costo_trabajo" min=200000>
+								<input type="number" class="form-control" name="costo_trabajo" min=5000>
 							</div>
 						</div>
 						<!-- dispositivos -->

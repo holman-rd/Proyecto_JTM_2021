@@ -32,9 +32,11 @@ class ImprimirFacturaController extends Controller
             $trabajo=DB::table('trabajo')->get();
 
             $trabajo_fecha=DB::table('trabajo')->get();
-            $trabajo_fecha=DB::select('select c.id_cliente,c.nombre,c.no_documento,c.telefono,t.fecha_inicio from cliente as c join dispositivo as d on (c.id_cliente=d.cliente_id_cliente) join trabajo as t on (d.serial=t.dispositivo_serial) GROUP by c.id_cliente,c.nombre,c.no_documento,c.telefono,t.fecha_inicio');
+            $trabajo_fecha=DB::select('select c.id_cliente,c.nombre,c.no_documento,c.telefono,c.correo,t.fecha_inicio from cliente as c join dispositivo as d on (c.id_cliente=d.cliente_id_cliente) join trabajo as t on (d.serial=t.dispositivo_serial) GROUP by c.id_cliente,c.nombre,c.no_documento,c.telefono,c.correo,t.fecha_inicio');
 
-            $dispositivo=DB::table('dispositivo')->get();
+            $trabajo_costo=DB::select('select c.id_cliente,c.nombre,c.no_documento,c.telefono,c.correo,d.serial,d.marca,t.descripcion,t.fecha_inicio,t.costo_trabajo from cliente as c join dispositivo as d on (c.id_cliente=d.cliente_id_cliente) join trabajo as t on (d.serial=t.dispositivo_serial)');            
+            
+            $dispositivo=DB::table('dispositivo')->get();     
 
             $cliente=DB::table('cliente')->get();
 
@@ -42,7 +44,7 @@ class ImprimirFacturaController extends Controller
 
             $empresa=DB::table('detalle_empresa')->get();
 
-            return view('almacen.imprimir.index',["detallef"=>$detallef, "trabajo"=>$trabajo,'trabajo_fecha'=>$trabajo_fecha,'empresa'=>$empresa,'cliente'=>$cliente,'dispositivo'=>$dispositivo, "factura"=>$factura]);
+            return view('almacen.imprimir.index',["detallef"=>$detallef, "trabajo"=>$trabajo,'trabajo_costo'=>$trabajo_costo,'trabajo_fecha'=>$trabajo_fecha,'empresa'=>$empresa,'cliente'=>$cliente,'dispositivo'=>$dispositivo, "factura"=>$factura]);
         }
     }
 

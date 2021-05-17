@@ -74,7 +74,6 @@
                                 
                                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('CategoriaController@index') }}"><i id="iconos" class="fas fa-project-diagram"></i> Categoría</a></li>
 
-                                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('EstadoTrabajoController@index') }}"><i id="iconos" class="fa fa-btn fas fa-history"> </i>Estado Trabajo</a></li>
                         
                                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ action('EmpresaController@index') }}"><i id="iconos" class="fas fa-building">  </i>   Empresa</a></li>
 

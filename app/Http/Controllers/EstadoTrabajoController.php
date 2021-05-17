@@ -53,5 +53,6 @@ class EstadoTrabajoController extends Controller
         $estadotrabajo->delete();
         return Redirect::to('almacen/estadotrabajo');
     }
-   
+
+
 }

@@ -22,7 +22,7 @@
 											<tr>
 												<td class="logo_factura">
 													<div >
-													<img src="{{URL::asset('assets/img/logos/jtm (1).png')}}" >
+													<img src="{{URL::asset('assets/img/logos/jtm.png')}}" >
 													</div>
 												</td>
 												<!-- solo es un espacio -->
@@ -40,7 +40,7 @@
 												<!-- descripcion de la empresa -->
 												<td class="info_empresa">
 													@foreach ($empresa as $emp)
-														<span class="h3">{{ $emp->nombre_empresa}}</span>
+														<span class="h3">{{ $emp->nombre_empresa}}</span><br><br>
 														<p>NIT: {{ $emp->nit}}</p>
 														<p>Direcci&oacute;n: {{ $emp->direccion}}</p>
 														<p>Telefono: {{ $emp->telefono}}</p>
@@ -84,12 +84,11 @@
 											<td>
 
 												<a href="" data-target="#modal-edit-{{$tbj->id_cliente}}"
-													data-toggle="modal"><button class="btn btn-info">Imprimir</button>
+													data-toggle="modal"><button class="btn btn-info">Vizualizar factura</button>
 												</a>
-
+												@include('almacen.imprimir.edit')
 											</td>
 										</tr>
-										@include('almacen.imprimir.edit')
 										@endforeach
 									</table>
 									<!-- tabla datos cliente -->
