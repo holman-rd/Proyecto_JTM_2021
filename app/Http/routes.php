@@ -33,7 +33,7 @@ Route::resource('almacen/cliente','ClienteController');
 Route::resource('almacen/factura','FacturaController');
 Route::resource('almacen/detallefactura','DetalleFacturaController');
 Route::resource('almacen/imprimir','ImprimirFacturaController');
-
+Route::resource('almacen/linea','LineaController');
 Route::resource('usuario','UsuarioController');
 
 Route::auth();

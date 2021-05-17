@@ -2,7 +2,7 @@
 @section ('head')
 	<div class="masthead-subheading">¡BIENVENIDO A JTM SISTEMAS!</div>
     <div class="masthead-heading text-uppercase">INICIO</div>
-    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">VER LINEA DE SEGUIMIENTO</a>
+    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="{{URL::action('LineaController@index',0)}}">VER LINEA DE SEGUIMIENTO</a>
 @stop
 
 @section ('contenido')
@@ -18,7 +18,6 @@
     <section class="page-section" id="services">
         <div class="container">
             <div class="text-center">
-                
                 <h2 class="section-heading text-uppercase">Servicios</h2>
                 <h3 class="section-subheading text-muted">En JTM Sistemas queremos ofrecer las mejores soluciones a sus problemas tecnológicos, a continuación se describen algunos de nuestros servicios...</h3>
             </div>
