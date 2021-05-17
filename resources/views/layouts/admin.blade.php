@@ -88,7 +88,7 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-left">Copyright © Your Website 2020</div>
+                    <div class="col-lg-4 text-lg-left">Copyright © Your Website 2021</div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
@@ -112,18 +112,13 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/01-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Threads</li>
-                                        <li>Category: Illustration</li>
-                                    </ul>
+                                    <h2 class="text-uppercase">REPARACION GENERAL DE IMPRESORAS</h2>
+                                    <br>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="" />
+                                    <p>Podras encontrar la solución a los diferentes daños que puedan ocurrirle a tu impresora.</p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Cerrar
                                     </button>
                                 </div>
                             </div>
@@ -142,18 +137,13 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/02-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Explore</li>
-                                        <li>Category: Graphic Design</li>
-                                    </ul>
+                                    <h2 class="text-uppercase">MANTENIMIENTO DE IMPRESORAS</h2>
+                                    <br>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="" />
+                                    <p>Demasiado importante ralizar la limpieza y lubricacion de todas las partes de la impresora y así garantizar un funcionamiento correcto.</p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Cerrar
                                     </button>
                                 </div>
                             </div>
@@ -172,18 +162,13 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/03-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Finish</li>
-                                        <li>Category: Identity</li>
-                                    </ul>
+                                    <h2 class="text-uppercase">LIMPIEZA DE INYECTORES</h2>
+                                    <br>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="" />
+                                    <p>Cuando se deja de imprimir durante un tiempo largo, los inyectores de las impresoras se tapan y para esto es necesario hacer la respectiva limpieza o el cambio de inyectores.</p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Cerrar
                                     </button>
                                 </div>
                             </div>
@@ -202,18 +187,13 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/04-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Lines</li>
-                                        <li>Category: Branding</li>
-                                    </ul>
+                                    <h2 class="text-uppercase">FORMATEO DE COMPUTADORES</h2>
+                                    <br>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/9.jpg" alt="" />
+                                    <p>Instalacion del windows y de los programas solicitados por el cliente.</p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Cerrar
                                     </button>
                                 </div>
                             </div>
@@ -232,18 +212,13 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/05-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Southwest</li>
-                                        <li>Category: Website Design</li>
-                                    </ul>
+                                    <h2 class="text-uppercase">RECARGA DE TONER</h2>
+                                    <br>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/7.jpg" alt="" />
+                                    <p>Las impresoras laser a diferencia de las de inyeccion o cartucho, utilizan un polvillo especial para imprimir.</p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Cerrar
                                     </button>
                                 </div>
                             </div>
@@ -262,18 +237,13 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/06-full.jpg" alt="" />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>Date: January 2020</li>
-                                        <li>Client: Window</li>
-                                        <li>Category: Photography</li>
-                                    </ul>
+                                    <h2 class="text-uppercase">VENTA DE TINTAS</h2>
+                                    <br>
+                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="" />
+                                    <p>Venta de tintas genericas para las impresoras marca epson.</p>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button">
                                         <i class="fas fa-times mr-1"></i>
-                                        Close Project
+                                        Cerrar
                                     </button>
                                 </div>
                             </div>
