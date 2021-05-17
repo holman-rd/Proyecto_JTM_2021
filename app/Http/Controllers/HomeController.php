@@ -4,6 +4,9 @@ namespace sisVentas\Http\Controllers;
 
 use sisVentas\Http\Requests;
 use Illuminate\Http\Request;
+use sisVentas\Contactenos;
+use DB;
+use Illuminate\Support\Facades\Redirect;
 
 class HomeController extends Controller
 {
@@ -22,8 +25,21 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('home');
+        if ($request){
+
+            $sugerencia=DB::table('sugerencia')
+            ->orderBy('id_sugerencia','asc')
+            ->paginate(10);
+            
+            return view('home',["sugerencia"=>$sugerencia]);
+        }
+    }
+
+    public function destroy($id){
+        $sugerencia=Contactenos::findOrFail($id);
+        $sugerencia->delete();
+        return Redirect::to('home')->with('info','Sugerencia Eliminada Correctamente');;
     }
 }
