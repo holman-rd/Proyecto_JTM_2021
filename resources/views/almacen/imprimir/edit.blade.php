@@ -1,5 +1,5 @@
 <div class="modal fade modal-slide-in-right" aria-hidden="true"
-role="dialog" tabindex="-1" id="modal-edit-{{$tbj->id_cliente}}">
+role="dialog" tabindex="-1" id="modal-edit-{{$tbj->id_cliente}}-{{ $tbj->fecha }}">
 
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -132,6 +132,8 @@ role="dialog" tabindex="-1" id="modal-edit-{{$tbj->id_cliente}}">
 								<!-- {{$total=0}} -->
 								@foreach ($trabajo_costo as $tc)
 									@if($tc->id_cliente == $tbj->id_cliente)
+										@if($tc->fecha == $tbj->fecha)
+
 										<tr>
 											<td class="textcenter">{{$tc->serial}}</td>
 											<td>{{$tc->marca}}</td>
@@ -161,6 +163,7 @@ role="dialog" tabindex="-1" id="modal-edit-{{$tbj->id_cliente}}">
 											<td class="textright">{{$tc->costo_trabajo}}</td>
 										</tr>
 										<!-- {{$total=$total+$tc->costo_trabajo}} -->
+										@endif
 									@endif
 								@endforeach
 								</tbody>

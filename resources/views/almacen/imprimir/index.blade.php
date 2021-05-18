@@ -80,10 +80,10 @@
 											<td>{{ $tbj->nombre }}</td>
 											<td>{{ $tbj->no_documento}}</td>
 											<td>{{ $tbj->telefono }}</td>
-											<td>{{ $tbj->fecha_inicio }}</td>
+											<td>{{ $tbj->fecha }}</td>
 											<td>
 
-												<a href="" data-target="#modal-edit-{{$tbj->id_cliente}}"
+												<a href="" data-target="#modal-edit-{{$tbj->id_cliente}}-{{ $tbj->fecha }}"
 													data-toggle="modal"><button class="btn btn-info">Vizualizar factura</button>
 												</a>
 												@include('almacen.imprimir.edit')
