@@ -224,7 +224,7 @@ role="dialog" tabindex="-1" id="modal-edit-{{$tbj->id_cliente}}-{{ $tbj->fecha }
 						</div>
 						<div class="form-row" align="center">
 							<div class="form-group col-sm-12" align="center">
-								<a href="assets/img/logos/JTM{{$tbj->id_cliente}}-{{$tbj->fecha}}.pdf" >Generar pdf</a>
+								<a href="../assets/img/logos/JTM{{$tbj->id_cliente}}-{{$tbj->fecha}}.pdf" >Generar pdf</a>
 							</div>
                     	</div>
 
