@@ -222,6 +222,11 @@ role="dialog" tabindex="-1" id="modal-edit-{{$tbj->id_cliente}}-{{ $tbj->fecha }
 							<p class="nota">Si usted tiene preguntas sobre esta factura, <br>pongase en contacto a traves de las lineas de comunicación ofrecidas. </p>
 							<h4 class="label_gracias">¡Gracias por su visita!</h4>
 						</div>
+						<div class="form-row" align="center">
+							<div class="form-group col-sm-12" align="center">
+								<a href="../assets/img/logos/JTM{{$tbj->id_cliente}}-{{$tbj->fecha}}.pdf" >Generar pdf</a>
+							</div>
+                    	</div>
 
 					</div>
 				</div>           
